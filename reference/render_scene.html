@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rayrender</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.10.0</span>
       </span>
     </div>
 
@@ -145,6 +145,8 @@
   <span class='kw'>samples</span> <span class='kw'>=</span> <span class='fl'>100</span>,
   <span class='kw'>min_variance</span> <span class='kw'>=</span> <span class='fl'>5e-05</span>,
   <span class='kw'>min_adaptive_size</span> <span class='kw'>=</span> <span class='fl'>8</span>,
+  <span class='kw'>max_depth</span> <span class='kw'>=</span> <span class='fl'>50</span>,
+  <span class='kw'>roulette_active_depth</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>ambient_light</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
   <span class='kw'>lookfrom</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>10</span>),
   <span class='kw'>lookat</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>0</span>),
@@ -202,6 +204,15 @@ will use the maximum number of samples everywhere.</p></td>
     <tr>
       <th>min_adaptive_size</th>
       <td><p>Default `8`. Width of the minimum block size in the adaptive sampler.</p></td>
+    </tr>
+    <tr>
+      <th>max_depth</th>
+      <td><p>Default `50`. Maximum number of bounces a ray can make in a scene.</p></td>
+    </tr>
+    <tr>
+      <th>roulette_active_depth</th>
+      <td><p>Default `10`. Number of ray bounces until a ray can stop bouncing via
+Russian roulette.</p></td>
     </tr>
     <tr>
       <th>ambient_light</th>
